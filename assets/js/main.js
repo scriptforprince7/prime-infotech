@@ -309,37 +309,49 @@
         $(".calc").addClass("calc_hide");
         $(".calculator-result").addClass("calc_show");
     });
-    
-    // Calculator
-    // loan1
-    const amount = document.getElementById('amount'),
+
+// Loan calculator logic
+const amount = document.getElementById('amount'),
     interest = document.getElementById('interest'),
     year = document.getElementById('year'),
     monthly_cost = document.getElementById('monthly_cost'),
     calculate = document.getElementById('calc_submit'),
-    total_value = document.getElementById('total_value');
+    total_value = document.getElementById('total_value'),
+    result_section = document.querySelector('.calculator-result');  // Result section
 
-    // loan2
-    const amount2 = document.getElementById('amount2'),
-    interest2 = document.getElementById('interest2'),
-    year2 = document.getElementById('year2'),
-    monthly_cost2 = document.getElementById('monthly_cost2'),
-    calculate2 = document.getElementById('calc_submit2'),
-    total_value2 = document.getElementById('total_value2');
-    
-    if(calculate){ 
-        calculate.addEventListener('click', function(e){
-            e.preventDefault()
-            let total = (amount.value/100 * interest.value) + parseInt(amount.value)
-            total_value.innerHTML = total.toFixed(2)
-            monthly_cost.innerHTML = (total/(year.value*12)).toFixed(2)
-        
-            // loan2
-            let total2 = (amount2.value/100 * interest2.value) + parseInt(amount2.value)
-            total_value2.innerHTML = total2.toFixed(2)
-            monthly_cost2.innerHTML = (total2/(year2.value*12)).toFixed(2)
-        })
-    }
+// Ensure the result section is hidden initially
+result_section.classList.add('calc_hide');
+
+if (calculate) {
+    calculate.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        // Ensure that all required fields are filled
+        if (amount.value > 0 && interest.value > 0 && year.value > 0) {
+            // Calculate the total loan cost and monthly cost
+            let total = (amount.value * (1 + (interest.value / 100) * year.value));
+            total_value.innerHTML = `₹${total.toFixed(2)}`;  // Display total loan cost
+            monthly_cost.innerHTML = `₹${(total / (year.value * 12)).toFixed(2)}`;  // Display monthly cost
+
+            // Show the result section after valid input
+            result_section.classList.add('calc_show');
+            result_section.classList.remove('calc_hide');
+        } else {
+            // Alert the user if fields are missing, but do not hide the form
+            alert("Please enter valid values for all fields.");
+            
+            // Ensure the result section stays hidden if validation fails
+            result_section.classList.remove('calc_show');
+            result_section.classList.add('calc_hide');
+        }
+    });
+}
+
+
+
+
+
+
 
    
 

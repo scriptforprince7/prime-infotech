@@ -3826,6 +3826,25 @@ label.error {
   display: flex;
   align-items: flex-start;
 }
+
+.calculator-result.calc_hide {
+  display: none; /* Hide the result section */
+}
+
+.calculator-result.calc_show {
+  display: flex; /* Show the result section */
+}
+
+
+
+
+
+.calc_show {
+  visibility: visible !important;
+  position: relative !important;
+}
+
+
 .calculator .calc_hide {
   visibility: hidden;
 }
