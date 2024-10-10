@@ -5530,6 +5530,155 @@ label.error {
     padding: 14px;
   }
 }
-/* ==== 
-  --------- (6.0) responsive styles end ---------
-  ==== *//*# sourceMappingURL=style.css.map */
+
+/* WhatsApp button */
+.whatsapp-float {
+  cursor: pointer;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;  /* Moved to the left */
+  background-color: #2ba6d1;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px #999;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  box-shadow: 2px 2px 15px #2ba6d1;
+}
+
+.whatsapp-float i {
+  margin-top: 6px;
+  margin-left:5px;
+  font-size: 44px !important;
+  color: white;
+}
+
+/* Floating text */
+.floating-text {
+  position: fixed;
+  bottom: 10px;
+  left: 1px;  /* Adjust this value to match the left alignment of the button */
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background-color: #2ba6d1; /* Background color for better visibility */
+  padding: 8px 16px;  /* Padding around the text */
+  border-radius: 20px;  /* Rounded corners */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+  animation: floatText 1.5s infinite ease-in-out;
+  z-index: 998;
+}
+
+/* Animation for moving the text up and down */
+@keyframes floatText {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+
+
+/* Section Styling */
+.image-text-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.containerr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Image Styling */
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Content Styling */
+.text-container {
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+.text-container h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Styling for points list */
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.points-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Adding the green tick before each list item */
+.points-list li::before {
+  content: "✔"; /* This is the tick icon (can replace with an image if needed) */
+  color: green;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem; /* Adjust size of the tick */
+  top: 0;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .containerr {
+    flex-direction: column; /* Change to column on smaller screens */
+    text-align: center;
+  }
+
+  .image-container,
+  .text-container {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-container h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
