@@ -211,10 +211,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 col-xxl-5">
-                    <div class="hero__thumb wow fadeInUp" data-wow-duration="0.8s">
-                        <img src="assets/images/hero_img.png" alt="Image">
-                    </div>
+                <div class="col-12 col-lg-6 col-xxl-5 sign-up ">
+                    <form method="POST" action="contact.php" class="sign-up__form wow fadeInDown" data-wow-duration="0.8s">
+                        <h3 class="contact__title wow fadeInDown" data-wow-duration="0.8s">Start Your Journey Today...</h3>
+                        <hr>
+                        <div class="sign-up__form-part">
+                            <div class="input-group">
+                                <div class="input-single">
+                                    <label class="label" for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name..." required>
+                                </div>
+                                <div class="input-single">
+                                    <label class="label" for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email..." required>
+                                </div>
+                            </div>
+                            <div class="input-single">
+                                <label class="label" for="phone">Phone</label>
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter Your Number..." required>
+                            </div>
+                            <div class="input-single">
+                                <label class="label" for="message">Message/Query</label>
+                                <textarea class="form-control" id="message" name="message" rows="8" placeholder="Enter Your Message..." required></textarea>
+                            </div>
+                        </div>
+                        <span id="msg"></span> 
+                        <button type="submit" class="btn_theme btn_theme_active mt_40" name="submit" id="submit">Start your journey today <i class="bi bi-arrow-up-right"></i><span></span></button>
+                    </form>
+                    
                 </div>
             </div>
         </div>
