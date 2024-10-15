@@ -2378,6 +2378,10 @@ label.error {
   margin-right: 0;
 }
 
+.navbar-brand img {
+  max-width: 35% !important;
+}
+
 .main-menu.index-page .navbar-nav .nav-item .nav-link {
   color: rgb(7, 76, 62) !important;
   font-weight: 700;
@@ -2567,7 +2571,7 @@ label.error {
 }
 @media (max-width: 1399px) {
   .navbar-brand img {
-    max-width: 75% !important;
+    max-width: 45% !important;
   }
 }
 @media (max-width: 1199px) {
@@ -2681,7 +2685,7 @@ label.error {
     color: #E0F300;
   }
   .header-section .navbar {
-    padding: 20px 0;
+    padding: 0px 0;
   }
   .header-section .navbar-toggler span {
     color: white;
@@ -3340,7 +3344,7 @@ label.error {
 
 @media (max-width: 1399px) {
   .footer .footer__logo img {
-    width: 75%;
+    width: 45%;
   }
 }
 @media (max-width: 1199px) {
