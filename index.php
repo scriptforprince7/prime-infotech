@@ -230,18 +230,18 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 col-xxl-5 sign-up ">
-                    <form method="POST" action="contact.php" class="sign-up__form wow fadeInDown" data-wow-duration="0.8s">
+                    <form action="submit-form.php" method="post" id="contactForm" class="sign-up__form wow fadeInDown" data-wow-duration="0.8s">
                         <h3 class="contact__title wow fadeInDown" data-wow-duration="0.8s">Start Your Journey Today...</h3>
                         <hr>
                         <div class="sign-up__form-part">
                             <div class="input-group">
                                 <div class="input-single">
                                     <label class="label" for="name">Name</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name..." required>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter name" required="required">
                                 </div>
                                 <div class="input-single">
                                     <label class="label" for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Your Email..." required>
+                                    <input type="email" class="form-control" name="email" placeholder="Enter email" required="required">
                                 </div>
                             </div>
                             <div class="input-single">
